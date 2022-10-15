@@ -129,15 +129,6 @@ $ Meow
 - **Termux**
 </details>
 
-##
-
-<h3 align="center"><i>:: Workflow ::</i></h3>
-<p align="center">
-<img src=".github/misc/workflow.gif"/>
-</p>
-
-##
-
 ### Find Me on:
 <p align="left">
   <a href="https://instagram.com/keshavah_reddy" target="_blank"><img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"></a>
