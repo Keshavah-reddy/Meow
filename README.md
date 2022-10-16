@@ -128,6 +128,12 @@ $ Meow
 - **Fedora**
 - **Termux**
 </details>
+##
+
+<h3 align="center"><i>:: Workflow ::</i></h3>
+<p align="center">
+<img src="https://i.ibb.co/6BNmGC7/ezgif-5-82d45e91f3.gif"/>
+</p>
 
 ##
 ### Find Me on:
