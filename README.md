@@ -138,7 +138,7 @@ $ Meow
 ##
 ### Find Me on:
 <p align="left">
-  <a href="https://instagram.com/keshavah_reddy" target="_blank"><img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"></a>
+  <a href="https://instagram.com/keshavah_reddy" target="_blank"><img src="https://i.ibb.co/vQD0mSW/logo-ig-png-32464.png"width="100" height="100"></a>
   <a href="https://github.com/Keshavah-reddy" target="_blank"><img src="https://i.ibb.co/PQqgy4f/Github-logo-PNG7.png"width="100" height="100"></a>
 </p>
 
