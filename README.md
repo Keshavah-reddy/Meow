@@ -139,7 +139,7 @@ $ Meow
 ### Find Me on:
 <p align="left">
   <a href="https://instagram.com/keshavah_reddy" target="_blank"><img src="https://i.ibb.co/vQD0mSW/logo-ig-png-32464.png"width="100" height="100"></a>
-  <a href="https://github.com/Keshavah-reddy" target="_blank"><img src="https://i.ibb.co/PQqgy4f/Github-logo-PNG7.png"width="100" height="100"></a>
+  <a href="https://github.com/Keshavah-reddy" target="_blank"><img src="[https://i.ibb.co/PQqgy4f/Github-logo-PNG7.png](https://i.ibb.co/VTcGzr8/github-11-64.png)"width="100" height="100"></a>
 </p>
 
 
