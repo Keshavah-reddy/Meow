@@ -129,6 +129,11 @@ $ Meow
 - **Termux**
 </details>
 
+##Donate & Support:
+<p align="left">
+  <a href="upi://pay?pa=8522881153@axl&pn=Keshavareddy&mc=0000&mode=02&purpose=00" target="_blank"><img src="https://i.ibb.co/d5Spw07/donate.webp
+</p>
+
 ##
 
 <h3 align="center"><i>:: Workflow ::</i></h3>
