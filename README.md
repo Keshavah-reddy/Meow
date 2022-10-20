@@ -131,7 +131,7 @@ $ Meow
 
 ##Donate & Support:
 <p align="left">
-  <a href="upi://pay?pa=8522881153@axl&pn=Keshavareddy&mc=0000&mode=02&purpose=00" target="_blank"><img src="https://i.ibb.co/d5Spw07/donate.webp
+  <a href="upi://pay?pa=8522881153@axl&pn=Keshavareddy&mc=0000&mode=02&purpose=00" target="_blank"><img src="https://i.ibb.co/d5Spw07/donate.jpg"width="313" height="145"></a>
 </p>
 
 ##
