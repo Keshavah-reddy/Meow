@@ -128,12 +128,6 @@ $ Meow
 - **Fedora**
 - **Termux**
 </details>
-
-##Donate & Support:
-<p align="left">
-  <a href="upi://pay?pa=8522881153@axl&pn=Keshavareddy&mc=0000&mode=02&purpose=00" target="_blank"><img src="https://i.ibb.co/d5Spw07/donate.jpg"width="313" height="145"></a>
-</p>
-
 ##
 
 <h3 align="center"><i>:: Workflow ::</i></h3>
@@ -148,5 +142,10 @@ $ Meow
   <a href="https://github.com/Keshavah-reddy" target="_blank"><img src="https://i.ibb.co/VTcGzr8/github-11-64.png"width="100" height="100"></a>
 </p>
 
+
+##Donate & Support:
+<p align="left">
+  <a href="upi://pay?pa=8522881153@axl&pn=Keshavareddy&mc=0000&mode=02&purpose=00" target="_blank"><img src="https://i.ibb.co/d5Spw07/donate.jpg"width="313" height="145"></a>
+</p>
 
 <!-- // -->
